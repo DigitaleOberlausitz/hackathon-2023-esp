@@ -1,8 +1,7 @@
 
 
 # Willkommen zum Hackathon 2023
-Für den diesjährigen Hackathon stehen Mikrocontroller und Sensoren bereit.
-Dieses Repository soll dir den Einstieg in die Thematik erleichtern :)
+Für den diesjährigen Hackathon stehen Mikrocontroller und Sensoren bereit. Dieses Repository soll dir den Einstieg in die Thematik erleichtern :)
 
 Ansprechpartner: Marco und Pawel
 
@@ -15,7 +14,6 @@ Im Herzen einer Smart City befinden sich Sensoren und Mikrocontroller, die ihre 
 Wir vom Verein Digitale Oberlausitz e.V. glauben, es gibt in den Städten eine ganze Menge Möglichkeiten, wo mehr Daten mehr helfen könnten. Doch was sind das für Möglichkeiten? Wo liegen die Datenschätze, die gehoben werden möchten?
 
 Das ist unsere diesjährige Challenge! Welche Daten könnten Rathäusern helfen, ihre Stadt zu gestalten? Von welchen Daten würden die Bewohner profitieren? Welche Prozesse könnten damit angestoßen werden?
-
 
 
 # Übersicht
@@ -58,32 +56,51 @@ WLAN Code Snippet
 Bluetooth musst du herausfinden :)
 
 ## Daten versenden
-WLAN
-HiveMQ
-Azure: nein
-AWS: Pawel stellt euch das bereit
-Eigene Lösung: gern!
+Die Mikrocontroller sind dafür ausgelegt dezentral Daten zu erfassen - eben in der Stadt verteilt. Es gibt mehrere Wege, wie die Daten zu deiner Applikation gelangen können.
 
+### WLAN
+Die Mikrocontroller können sowohl eigene WLANs aufmachen, als sich auch mit bestehenden WLANs verbinden.
+Nutze das Veranstalter-WLAN. Solltest du mobil unterwegs sein, mache ein Hotspot mit deinem SmartPhone auf.
+
+### MQTT Broker
+MQTT ist ein leichtgewichtiges Protokoll zum energiesparenden und einfachen versenden von Nachrichten.
+Nutze einen Online-MQTT-Server ("Broker") um Daten an einen zentralen Ort zu versenden. Von dort kann ein MQTT-Client (deine Applikation) sie wieder abholen.
+
+Beispiele sind:
+- **HiveMQ Serverless** (https://www.hivemq.com/pricing/) in weniger als 5 Minuten erstellt, wenn du einen GitHub Account hast. In Verbindung mit ESP32 gibt es Tutorials im Netz.
+
+- **AWS**: Pawel stellt euch einen AWS MQTT Broker bereit. Besonders interessant, wenn ihr einen Blick in Cloud-Technologien erhaschen wollt.
+
+### HTTP
+Mit **https://dweet.io/play/** gibt es eine Möglichkeit Nachrichten im HTTP-Format an dweet zu senden und wieder abzuholen.
+
+### Eigene Lösung
+Fällt dir eine Lösung ein, die für dich besser geeignet ist? Do it!
+
+### Alternativen/Ausblick: 
+Steht uns für diesen Hackathon leider nicht bereit, aber LoRaWan ist eine Technologie um möglichst energiesparsam Daten über große Distanzen zu verschicken. Quasi am Mobilfunknetz "vorbei" auf einer anderen Wellenlänge. Bist du am Aufbau einer größeren IoT / Smart City Lösung interessiert, lohnt sich der Einstieg auf alle Fälle!
 
 # Stromversorgung
 
 Die Stromversorgung des Mirkocontrollers und der Sensoren kann auf mehrere Arten geschehen.
 Je nachdem, welchen Anwendungszweck du gerade brauchst, lässt sich die Stromversorgung umstellen.
+Wir haben dazu mehrere "Ausbaustufen" für die Stromversorgung vorbereitet.
 
 
 ## Zur Beachtung
-- Niemals einen Sensor/Mikrocontroller von zwei Stromquellen gleichzeitig zu versorgen!
-- Das MB102 Netzteil kann nur einen Mikrocontroller zuverlässig mit Strom versorgen. Hast du zwei Mikrocontroller, dann brauchst du zwei MB102 Netzteile.
-- Der USB-Ausgang des MB102 kann den Mikrocontroller mit Strom versorgen.
-- Bitte versorge den Mikrocontroller nur über seinen Micro-USB Port mit Strom. 
-- Vergewissere dich stets, wie und womit du gerade deine Sensoren und Mikrocontroller mit Strom versorgst.
+Nutzt du unsere Hardware, müssen wir dich auf folgende Regeln hinweisen, um Schäden an Hardware und Teilnehmer*Innen zu vermeiden:
+
+- **Versorge einen Sensor und/oder Mikrocontroller niemals von zwei Stromquellen gleichzeitig!**
+- **Bitte betreibe den Mikrocontroller nur über seinen Micro-USB Port mit Strom.** 
+- **Das MB102 Netzteil kann nur einen Mikrocontroller zuverlässig mit Strom betreiben.** Hast du zwei Mikrocontroller, dann brauchst du zwei MB102 Netzteile.
+- **Vergewissere dich stets, wie und womit du gerade deine Sensoren und Mikrocontroller mit Strom versorgst.**
 
 ## MB102 Netzteil
-+ - Verwechselung auf dem MB102
-Jumper auf dem MB102
-6,5V bis 12V Eingangsspannung
-ca. 300 Milliampere
-reicht für einen Mikrocontroller und paar Sensoren
+Das MB102 Netzteil kann einen Mikrocontroller und ein paar Sensoren mit Strom versorgen (ca. 300 bis 500mA Ausgabe). Das MB102-Netzteil wird auf das Breadboard gesteckt, sodass beide Schienen mit Strom versorgt werden.
+
+Über Jumper-Stecker kann zwischen 0V, 3.3V und 5V je Stromschiene unterschieden werden. Bitte stecke die Jumper nur im ausgeschalteten Zustand um. Das MB102 Netzteil kann über den weißen Schalter neben der grünen LED ein-und ausgeschalten werden.
+
+Um das MB102 Netzteil mit Strom zu versorgen, stehen Batterien und Netzteile für die Steckdose bereit. Suche dir die passende Lösung in den Nachfolgekapiteln aus.
 
 
 ## Stationär: Laptop-USB für Mikrocontroller und Sensoren
