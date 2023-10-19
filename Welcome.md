@@ -43,12 +43,6 @@ Dazu bieten wir folgenden Mikrocontroller an:
 
 ## Arduino Studio
 
-## Breadboard beschalten
-
-## Zwei Mikrocontroller betreiben
-Breadboard zusammenstecken
-
-
 # Mikrocontroller
 Stromaufnahme: bis zu 500mA, wobei WLAN am meisten Strom zieht
 WLAN Code Snippet
@@ -79,13 +73,17 @@ Serial.println("Connected to the WiFi network");
 ```
 
 ### MQTT Broker
-MQTT ist ein leichtgewichtiges Protokoll zum energiesparenden und einfachen versenden von Nachrichten.
-Nutze einen Online-MQTT-Server ("Broker") um Daten an einen zentralen Ort zu versenden. Von dort kann ein MQTT-Client (deine Applikation) sie wieder abholen.
+MQTT ist ein leichtgewichtiges Protokoll zum energiesparenden und einfachen versenden von Nachrichten. Ursprünglich entwickelt für die Raumfahrt!
 
-Beispiele sind:
-- **HiveMQ Serverless** (https://www.hivemq.com/pricing/) in weniger als 5 Minuten erstellt, wenn du einen GitHub Account hast. In Verbindung mit ESP32 gibt es Tutorials im Netz.
 
-- **AWS**: Pawel stellt euch einen AWS MQTT Broker bereit. Besonders interessant, wenn ihr einen Blick in Cloud-Technologien erhaschen wollt.
+Nutze einen Online-MQTT-Server ("Broker") um Daten an einen zentralen Ort zu versenden. Von dort kann ein MQTT-Client (= deine Applikation) sie wieder abholen.
+
+In Verbindung mit ESP32 gibt es Tutorials und Libraries im Netz. (Beispiel: https://github.com/knolleary/pubsubclient und https://www.survivingwithandroid.com/esp32-mqtt-client-publish-and-subscribe/)
+
+Beispiele für MQTT Broker sind:
+- **HiveMQ Serverless Free** (https://www.hivemq.com/pricing/) ist kostenlos und in weniger als 5 Minuten erstellt, wenn du einen GitHub Account hast.
+
+- **AWS**: Pawel stellt euch einen AWS MQTT Broker bereit. Besonders interessant, wenn du einen Blick in Cloud-Technologien erhaschen willst.
 
 ### HTTP
 Mit **https://dweet.io/play/** gibt es eine Möglichkeit Nachrichten im HTTP-Format an dweet zu senden und wieder abzuholen.
@@ -93,6 +91,29 @@ Mit **https://dweet.io/play/** gibt es eine Möglichkeit Nachrichten im HTTP-For
 ### Eigene Lösung
 Fällt dir eine Lösung ein, die für dich besser geeignet ist? Do it!
 
-### Alternativen/Ausblick: 
-Steht uns für diesen Hackathon leider nicht bereit, aber LoRaWan ist eine Technologie um möglichst energiesparsam Daten über große Distanzen zu verschicken. Quasi am Mobilfunknetz "vorbei" auf einer anderen Wellenlänge. Bist du am Aufbau einer größeren IoT / Smart City Lösung interessiert, lohnt sich der Einstieg auf alle Fälle!
+### Ausblick: 
+Steht uns für diesen Hackathon leider nicht bereit, aber LoRaWan ist eine Technologie um möglichst energiesparsam Daten über Kilometer zu verschicken. Quasi am Mobilfunknetz "vorbei" auf einer anderen Wellenlänge. Bist du am Aufbau einer umfangreichen IoT / Smart City Lösung interessiert, lohnt sich der Einsatz auf alle Fälle!
 
+
+# Breadboard
+Ein Breadboard (Steckplatine) hilft dir deine Technik zusammenzuhalten :)
+
+Es bietet zwei stromführende Schienen an den Seiten. Von dort können deine Sensoren mit Strom versorgt werden. Der Strom kommt vom MB102-Netzteil. (Siehe dazu Datei [Stromversorgung.md](Stromversorgung.md))
+  
+Mittig liegen die Stecker, wo die Pins des Mikrocontrollers, Sensoren und Kabel eingesteckt werden können. Diese sind immer über 5 nebeneinanderliegenden Steckplätze verbunden.
+
+![](img/Ein_Breadboard.jpg)
+
+**Achtung: Die "blaue-rote-Plus-Minus Markierung" an den Stromschienen muss nicht zwangsläufig mit dem tatsächlichen Stromlauf zusammenhängen!** Das MB102-Netzteil gibt hier den Ton an! Achte auf die + und - Markierung vom MB102-Netzteil.
+
+
+## Zwei Breadboards verbinden
+Du kannst zwei Breadboards an den Seiten zusammenstecken. Am besten du entfernst eine der beiden zusammenliegenden Stromschienen, damit das MB102-Netzteil und der Mikrocontroller gut dazwischenpassen.
+
+![](img/Zwei_Breadboards.jpg)
+
+Auf diese Weise passen auch zwei Mikrocontroller und zwei MB102-Netzeil auf zwei Breadboards.
+
+**Achtung: Setze den Jumper der MB102-Netzteile für die mittlere Stromschiene auf 0V.**
+
+**Achtung: Du hast hier Hebelkräfte am Wirken. Sei vorsichtig, keine Pins des Mikrocontrollers zu verbiegen.**
