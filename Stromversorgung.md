@@ -84,7 +84,7 @@ Du brauchst:
 ToDo:
 - Verbinde mit dem USB-Kabel deine Powerbank mit dem Mikrocontroller
 - Achtung: Manche Powerbanks können sich wegen der geringen Stromaufnahme des Mikrocontrollers von selbst abschalten.
-- Achtung: Powerbanks nicht für den Dauerbetrieb ausgelgegt. Alternativ nutze Batterien.
+- Achtung: Powerbanks sind nicht für den Dauerbetrieb ausgelgegt. Alternativ nutze Batterien.
 
 ![](img/Strom_via_Powerbank.jpg)
 

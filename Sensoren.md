@@ -9,7 +9,7 @@ Die Liste der bereitstehenden Sensoren:
 | Lichtstärke      | KY-018 Foto LDR Sensor               |
 | Luftdruck        | WaveShare BME280 und Adafruit BME688 |
 | Luftfeuchtigkeit | WaveShare BME280 und Adafruit BME688 |
-| Luftqualität     | WaveShare BME280 und Adafruit BME688 |
+| Luftqualität     | Adafruit BME688 |
 | Regentropfen     | AZDelivery Regentropfen Sensor Modul |
 | RGB-Farbspektrum | GY-TCS34725 RGB Color Sensor         |
 | Schallpegel      | GY-MAX9814 Sound Sensor Module       |
