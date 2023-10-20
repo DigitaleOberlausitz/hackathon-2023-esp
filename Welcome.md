@@ -45,9 +45,7 @@ Die neuere, auf Visual Studio Code basierende, heißt Arduino IDE und die Instal
 Sollte diese IDE nicht funktionieren, empfehlen wir die ältere Version der Programmierumgebung, mehr dazu [hier](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/).
 
 # Mikrocontroller
-Stromaufnahme: bis zu 500mA, wobei WLAN am meisten Strom zieht
-WLAN Code Snippet
-Bluetooth musst du herausfinden :)
+**Ein kleines Nachschlagewerk zum ESP32 Mikrocontroller bekommst du als Ausdruck.**
 
 ## Daten versenden
 Die Mikrocontroller sind dafür ausgelegt dezentral Daten zu erfassen - eben in der Stadt verteilt. Es gibt mehrere Wege, wie die Daten zu deiner Applikation gelangen können.
@@ -99,7 +97,7 @@ Steht uns für diesen Hackathon leider nicht bereit, aber LoRaWan ist eine Techn
 # Breadboard
 Ein Breadboard (Steckplatine) hilft dir deine Technik zusammenzuhalten :)
 
-Es bietet zwei stromführende Schienen an den Seiten. Von dort können deine Sensoren mit Strom versorgt werden. Der Strom kommt vom MB102-Netzteil. (Siehe dazu Datei [Stromversorgung.md](Stromversorgung.md))
+Es bietet zwei stromführende Schienen an den Seiten. Von dort können deine Sensoren mit Strom versorgt werden. Der Strom kommt vom MB102-Netzteil. (Für mehr Details schaue dir das an: [Stromversorgung.md](Stromversorgung.md))
   
 Mittig liegen die Stecker, wo die Pins des Mikrocontrollers, Sensoren und Kabel eingesteckt werden können. Diese sind immer über 5 nebeneinanderliegenden Steckplätze verbunden.
 
