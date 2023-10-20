@@ -36,12 +36,13 @@ Dazu bieten wir folgenden Mikrocontroller an:
 - mit Bluetooth Classic & Low Energy (BLE)
 - I2C, SPI, UART, GPIO, ...
 - verarbeitet analoge und digitale Sensorsignale
-- 3.3V und 5V Versorungs-und Betriebsspannung
+- 3.3V und 5V Versorungs- und Betriebsspannung
 - Programmierbar über Micro-USB per Arduino und C
 
 # Installation
-
-## Arduino Studio
+Es gibt zwei Versionen der Programmierumgebung, die wir für den Einstieg empfehlen. 
+Die neuere, auf Visual Studio Code basierende, heißt Arduino IDE und die Installationsanleitung ist [hier](https://randomnerdtutorials.com/installing-esp32-arduino-ide-2-0/) zu finden. 
+Sollte diese IDE nicht funktionieren, empfehlen wir die ältere Version der Programmierumgebung, mehr dazu [hier](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/).
 
 # Mikrocontroller
 Stromaufnahme: bis zu 500mA, wobei WLAN am meisten Strom zieht
@@ -108,11 +109,11 @@ Mittig liegen die Stecker, wo die Pins des Mikrocontrollers, Sensoren und Kabel 
 
 
 ## Zwei Breadboards verbinden
-Du kannst zwei Breadboards an den Seiten zusammenstecken. Am besten du entfernst eine der beiden zusammenliegenden Stromschienen, damit das MB102-Netzteil und der Mikrocontroller gut dazwischenpassen.
+Du kannst zwei Breadboards an den Seiten zusammenstecken. Am besten du entfernst eine der beiden zusammenliegenden Stromschienen, damit das MB102-Netzteil und der Mikrocontroller gut dazwischen passen.
 
 ![](img/Zwei_Breadboards.jpg)
 
-Auf diese Weise passen auch zwei Mikrocontroller und zwei MB102-Netzeil auf zwei Breadboards.
+Auf diese Weise passen auch zwei Mikrocontroller und zwei MB102-Netzteile auf zwei Breadboards.
 
 **Achtung: Setze den Jumper der MB102-Netzteile für die mittlere Stromschiene auf 0V.**
 
